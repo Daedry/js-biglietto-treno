@@ -48,8 +48,8 @@ if (age < 18) {
     document.getElementById("final_price").innerHTML = `Il prezzo è di ${total_price_minor} euro`;
 } else if (age > 65){ 
     //sconto del 40% per gli over 65
-    (final_price / 100) * discount_over_65;
-    discountValue_over.toFixed(2);
+    discountValue_over = (final_price / 100) * discount_over_65;
+    total_price_over = discountValue_over.toFixed(2);
     console.log(total_price_over);
     document.getElementById("final_price").innerHTML = `Il prezzo è di ${total_price_over} euro`;
 } else {
