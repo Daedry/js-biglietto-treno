@@ -5,18 +5,53 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65. 
 */
 
-//chiedere all'utente l'età
-
-
-
 //chiedere all'utente il numero di km che vuole percorrere
 
+const mileage = parseInt(prompt("Quanti chilometri vuole percorrere?"));
+console.log(mileage);
 
+if (isNaN(mileage)){
+    alert('Selezionare i chilometri numericamente')
+}
+
+//chiedere all'utente l'età
+
+const age = parseInt(prompt("Quanti anni ha?"));
+console.log(age);
+
+if (isNaN(age)){
+    alert('Selezionare l\'età numericamente')
+}
 
 //prezzo del biglietto in base ai km
 
+const price_for_km = 0.21;
+const price = price_for_km * mileage;
+const final_price = price.toFixed(2);
+console.log(final_price);
 
-//sconto del 20% per minorenni
+//Sconti
+
+const discount_minor_18 = 20;
+const discount_over_65 = 40;
+
+if (age < 18) {
+    //sconto del 20% per minorenni
+    const discountValue_minor = (final_price / 100) * discount_minor_18;
+    const total_price_minor = discountValue_minor.toFixed(2);
+    console.log(total_price_minor);
+    document.getElementById("final_price").innerHTML = `il prezzo è di ${total_price_minor} euro`;
+} else if (age > 65){ 
+    //sconto del 40% per gli over 65
+    const discountValue_over = (final_price / 100) * discount_over_65;
+    const total_price_over = discountValue_over.toFixed(2);
+    console.log(total_price_over);
+    document.getElementById("final_price").innerHTML = `il prezzo è di ${total_price_over} euro`;
+} else {
+    //Prezzo pieno per adulti
+    document.getElementById('final_price').innerHTML = `il prezzo è di ${final_price} euro`;
+}
 
 
-//sconto 40% per gli over 65
+
+
