@@ -1,0 +1,18 @@
+
+body {
+    background-color: rgb(185, 54, 54);
+}
+
+.container{
+    width: 500px;
+    height: 200px;
+    background-color: rgb(148, 107, 107);
+    border-radius: 0.75rem;
+    margin:10rem auto;
+}
+
+h1{
+    text-align: center;
+    padding: 4.5rem;
+    color: rgb(17, 22, 22);
+}

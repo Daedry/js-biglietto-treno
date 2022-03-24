@@ -40,16 +40,16 @@ if (age < 18) {
     const discountValue_minor = (final_price / 100) * discount_minor_18;
     const total_price_minor = discountValue_minor.toFixed(2);
     console.log(total_price_minor);
-    document.getElementById("final_price").innerHTML = `il prezzo è di ${total_price_minor} euro`;
+    document.getElementById("final_price").innerHTML = `Il prezzo è di ${total_price_minor} euro`;
 } else if (age > 65){ 
     //sconto del 40% per gli over 65
     const discountValue_over = (final_price / 100) * discount_over_65;
     const total_price_over = discountValue_over.toFixed(2);
     console.log(total_price_over);
-    document.getElementById("final_price").innerHTML = `il prezzo è di ${total_price_over} euro`;
+    document.getElementById("final_price").innerHTML = `Il prezzo è di ${total_price_over} euro`;
 } else {
     //Prezzo pieno per adulti
-    document.getElementById('final_price').innerHTML = `il prezzo è di ${final_price} euro`;
+    document.getElementById('final_price').innerHTML = `Il prezzo è di ${final_price} euro`;
 }
 
 
