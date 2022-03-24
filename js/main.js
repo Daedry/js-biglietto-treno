@@ -32,23 +32,21 @@ console.log(final_price);
 
 //Sconti
 
-const discount_minor_18 = 20;
 let discountValue_minor;
 let total_price_minor;
 
-const discount_over_65 = 40;
 let discountValue_over;
 let total_price_over;
 
 if (age < 18) {
     //sconto del 20% per minorenni
-    discountValue_minor = (final_price / 100) * discount_minor_18;
+    discountValue_minor = (final_price / 100) * 80;
     total_price_minor = discountValue_minor.toFixed(2);
     console.log(total_price_minor);
     document.getElementById("final_price").innerHTML = `Il prezzo è di ${total_price_minor} euro`;
 } else if (age > 65){ 
     //sconto del 40% per gli over 65
-    discountValue_over = (final_price / 100) * discount_over_65;
+    discountValue_over = (final_price / 100) * 60;
     total_price_over = discountValue_over.toFixed(2);
     console.log(total_price_over);
     document.getElementById("final_price").innerHTML = `Il prezzo è di ${total_price_over} euro`;
